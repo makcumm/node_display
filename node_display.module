@@ -3,3 +3,22 @@
  * @file
  * Dispalys selected node's from content type
  */
+
+/**
+ * Implements hook_help().
+ *
+ * Display help and module information.
+ *
+ * @param path
+ *	Path of the site fore display help
+ *
+ * @param arg
+ *	Array that holds the current path as returned from arg() function
+ */
+function node_display_help($path, $arg) {
+	switch ($path) {
+		case 'admin/help#node_display':
+			return '<p>' . t("Display links to nodes from selected content type.") . '</p>';
+			break;
+	}
+}
